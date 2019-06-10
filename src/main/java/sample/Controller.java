@@ -32,16 +32,16 @@ public class Controller {
             int x = (int) (event.getY() / 50);
             if (moves.emptyPoint(x, y)) {
                 moves.point(x,y);
-                addImage(Moves.getFirstPlayer(), x, y);
+                addImage(moves.getFirstPlayer(), x, y);
                 moves.winGame(x, y);
                 if (moves.isVictory()) {
                     JOptionPane.showMessageDialog(null, " Победа");
                     System.exit(0);
                 }
                 moves.changePlayer();
-                for (int i = 0; i < Moves.getBoard().length; i++){
-                    for (int j = 0; j < Moves.getBoard()[i].length; j++) {
-                        System.out.print(Moves.getBoard()[i][j] + "");
+                for (int i = 0; i < moves.getBoard().length; i++){
+                    for (int j = 0; j < moves.getBoard()[i].length; j++) {
+                        System.out.print(moves.getBoard()[i][j] + "");
                     }
                     System.out.println();
                 }

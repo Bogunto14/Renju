@@ -1,12 +1,12 @@
 package sample;
 
 class Moves {
-    private static int[][] board = new int[15][15];
-    private static int firstPlayer = 1;
-    private static int secondPlayer;
+    private int[][] board = new int[15][15];
+    private int firstPlayer = 1;
+    private int secondPlayer;
     private boolean victory = false;
 
-    static int[][] getBoard() {
+    int[][] getBoard() {
         return board;
     }
 
@@ -14,7 +14,7 @@ class Moves {
         return victory;
     }
 
-    static int getFirstPlayer() {
+    int getFirstPlayer() {
         return firstPlayer;
     }
 
